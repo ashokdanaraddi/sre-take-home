@@ -18,7 +18,13 @@ Manifest file: [user_hasher-service.yaml]
 4. Created the secrets under namespace config and secrets so that these values are passed to container as part of environment variable
 Manifest file: [user_salt-secret.yaml]
 
+5. Created PDB (pod distribution budget) so that minimum number of pods available/scheduled to handle to request during maintenance of worker nodes or crash of nodes
+Manifest file: [user_hasher-pdb.yaml]
 
+6. Created Horizontal Pod Autoscaler to scale up and down based on the metrics
+Manifest file: [user_hasher-hpa.yaml]
+
+   
 This implementation is specific to given requirement but can be improved with below additions
 
 1. Utilize the load balancers like HAProxy in Data Center and ALB in AWS
@@ -28,7 +34,6 @@ This implementation is specific to given requirement but can be improved with be
 5. Add liveliness and readiness probes 
 6. Add Roll based access control(RBAC) to restrict the access 
 7. Setup SSL/TLS certificate on ingress controller for Kubernetes Cluster
-
 
 
 
