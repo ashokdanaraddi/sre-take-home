@@ -35,7 +35,8 @@ This implementation is specific to given requirement but can be improved with be
 6. Add Roll based access control(RBAC) to restrict the access 
 7. Setup SSL/TLS certificate on ingress controller for Kubernetes Cluster
 
-
+Metrics
+1. Setup /metrics endpoint which will expose the requested metrics with the specified labels to Prometheus. 
 
 
 
